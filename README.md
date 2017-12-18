@@ -1,3 +1,7 @@
+# Introduction
+
+An infrastructure built around nanoc to produce contents on the web with a lot of maths and a heavy academic undertone (citations, etc).
+
 # How to setup the build environment?
 
 The prerequisites are:
