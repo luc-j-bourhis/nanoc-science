@@ -1,13 +1,11 @@
 %script{:type => "text/x-mathjax-config"}
   :plain
     MathJax.Hub.Config({
-      // we do not need delimiters as kramdown will transform a $$ XXX $$
-      // into span's or div's, the inner ones containing XXX,
-      // and with the appropriate id's and classes for an accompanying
-      // script to run Mathjax to render the content of those tags.
+      // we need delimiters as kramdown will transform a $$ XXX $$
+      // into either \\( … \\) for inline math and \\[ … \\] for display math
       tex2jax: {
-        inlineMath: [],
-        displayMath: [],
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
       },
 
       TeX: {
