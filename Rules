@@ -33,6 +33,8 @@ preprocess do
   end
 end
 
+compile '/**/README.*' do
+end
 compile_my_markdown(%r{/(#{@config[:languages].join('|')})/index.md},
                     '/abstracts.*')
 compile_my_markdown('/**/*.md', '/article.*')
