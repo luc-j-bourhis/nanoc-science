@@ -24,13 +24,13 @@ prune:
 deploy:
   default:
     kind: git
-    remote: git@github.com:luc-j-bourhis/blog.git
+    remote: git@github.com:MY_ACCOUNT_NAME/A_PROJECT_NAME.git
     branch: gh-pages
     forced: true
 
 # Web site editor
 editor:
-  Luc J. Bourhis
+  PUT YOUR NAME HERE
 
 # List of languages: they shall correspond to directories /xx at the root
 languages:

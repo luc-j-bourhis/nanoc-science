@@ -8,7 +8,10 @@ Ruby is the main dependency, as nanoc is written in that language. The exact ver
 
 # How to build the site?
 
-First clone this repository. Then create one directory in the `content` directory for each language in which you plan to write articles. Currently, only English and French are supported, directories `en` and `fr` respectively. Then each article shall live inside its own directory within its language directory: its content shall come from a file `index.md` written in markdown (the Kramdown flavour enhanced with features discussed below). Here is an example of hierarchy:
+1. clone this repository.
+2. copy file `nanoc.yaml.in` to `nanoc.yaml` and edit it to add author name (later on, when
+pulling a new version, you may want to merge the former into the latter instead)
+3. create one directory in the `content` directory for each language in which you plan to write articles. Currently, only English and French are supported, directories `en` and `fr` respectively. Then each article shall live inside its own directory within its language directory: its content shall come from a file `index.md` written in markdown (the Kramdown flavour enhanced with features discussed below). Here is an example of hierarchy:
 
 en/
     all about nothing/
@@ -28,11 +31,6 @@ Then:
 - `bundle exec nanoc deploy` will deploy the site to the server hosting the site;
 - the site can be previewed by launching a local server with
 
-        bundle exec nanoc view -p 4000 > /tmp/luc-j-bourhis-github-io.log 2>&1 &
-in `bash` or
+        bundle exec nanoc view -p 4000 > /path/to/my.log 2>&1 &
 
-        bundle exec nanoc view -p 4000 > /tmp/luc-j-bourhis-github-io.log ^&1 &
-in `fish`.
-
-Several deployment method are supported, which can be configured in `nanoc.yaml`, in section `deploy`. A fresh clone comes configured for github, for my own github account, so you will need to change the `remote` field. I refer you to nanoc documentation for the extra steps needed to finish the setup, and also for other deployment methods. In the future, I will provide a more user-friendly way to configure deployment out of the box!
-
+Several deployment method are supported, which can be configured in `nanoc.yaml`, in section `deploy`. The file `nanoc.yaml.in` has a commented out section for github: uncomment and fill in the details. I refer you to nanoc documentation for the extra steps needed to finish the setup, and also for other deployment methods.

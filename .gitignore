@@ -1,4 +1,5 @@
 bin/
+nanoc.yaml
 crash.log
 output/
 tmp/
