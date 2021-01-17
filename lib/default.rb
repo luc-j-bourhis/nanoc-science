@@ -5,6 +5,10 @@ require 'yaml'
 include Nanoc::Helpers::LinkTo
 include Nanoc::Helpers::Rendering # to allow the use of `render` in layouts
 
+def site_title
+  l = @item[:language]
+  @items["/#{l}/index.*"][:site_title]
+end
 
 # List of all articles
 def articles

@@ -6,11 +6,7 @@
       %img{:src => "/fr/icon.png"}
   #main
     %h1
-      - case @item[:language]
-      - when :en
-        Cartesian Musings
-      - when :fr
-        Idées aux quatre vents
+      = site_title
     .author
       = @config[:editor]
     - sorted_articles[@item[:language]].each do |cat, by_group|

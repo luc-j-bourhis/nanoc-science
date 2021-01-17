@@ -31,11 +31,6 @@ preprocess do
       }
     end
   end
-  @items
-  .map {|i| i[:language]}
-  .uniq.select {|l| l != :unknown}.each do |l|
-    @items.create('', {:language => l}, "/#{l}/index.md")
-  end
 end
 
 compile_my_markdown(%r{/(#{@config[:languages].join('|')})/index.md},
