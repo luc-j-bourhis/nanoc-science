@@ -63,4 +63,5 @@
       #just-after-abstract
       = yield
     = render "/bibliography.*"
-    = render "/#{@item[:language]}/licence.*"
+    - unless @item[:licence].nil?
+      = render "/#{@item[:language]}/#{@item[:licence]}.*"
